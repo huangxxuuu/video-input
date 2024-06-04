@@ -65,6 +65,14 @@ class YJ_Camera:
         if self.camera == None or not self.camera.isOpened():
             return False
         return True
+    
+    def capture_photo_memory(self):
+        if self.camera == None and not self.camera.isOpened():
+            return None
+        ret, frame = self.camera.read()
+        if ret:
+            return frame
+        return None
 
     def capture_photo(self, save_photo_name="photo.jpg"):
         if self.camera == None and not self.camera.isOpened():

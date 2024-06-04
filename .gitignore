@@ -2,3 +2,4 @@ camera-input/
 configs/
 test/
 tmp/
+*.pyc
